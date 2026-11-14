@@ -209,3 +209,14 @@ Phase 0: 공인 우회로 있나? ──Yes──→ yt-dlp / RSS·Atom / oEmbed
 | 수집 실패 진단 | `references/troubleshooting.md` |
 | 출력·저장 디렉터리 구조, `.gitignore` whitelist 정책 | `references/output-layout.md` |
 | Scrapling API 사용법 | `scripts/scrapling_reference.md` |
+
+---
+
+## ⚠️ 폴더 이름·경로 변경 금지 (중요)
+
+Claude의 기억(메모리)과 세션 기록(`~/.claude/projects/<경로기반 키>/`)은 **프로젝트 폴더의 절대경로**를 키로 저장된다. 따라서 이 폴더의 이름이나 위치를 바꾸면:
+- 기존 기억이 **옛 이름 키에 갇혀** 새 세션에서 자동 로드되지 않고,
+- 파일 저장이 **새로 생긴 빈 폴더**로 잘못 갈 수 있다.
+
+→ 이 폴더의 이름·경로를 바꾸지 말 것. (탐색기 상단 고정이 필요하면 폴더명에 ★ 등을 붙이지 말고 **'즐겨찾기에 고정'**을 사용.)
+→ 부득이 바꿨다면, 직후 Claude에게 **"폴더 이름 바꿨으니 기억 키 정리해줘"**라고 요청해 메모리 키를 새 경로로 이전할 것.
